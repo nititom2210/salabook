@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalaBook | My Bookings</title>
+  <link rel="stylesheet" href="css/booking.css">
+  <style>
+    .container { max-width: 1100px; margin: 30px auto; padding: 0 16px; }
+    .card { background:#fff; border:1px solid #eee; border-radius:12px; padding:18px; margin-bottom:14px; }
+    .muted { color:#666; font-size:14px; }
+    .actions a, .actions button { margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="salabook_landing.html" class="bact-btn">&lt;</a>
+    <div class="logo">SalaBook</div>
+    <ul class="nav-links">
+      <li><a href="salabook_landing.html">Home</a></li>
+      <li><a href="halls.html">Halls</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>My Bookings</h2>
+    <p class="muted">View your bookings, payment status, and actions.</p>
+    <div id="bookingsList"></div>
+  </main>
+
+  <script src="script/api.js"></script>
+  <script src="script/my_bookings_api.js"></script>
+</body>
+</html>
+
+

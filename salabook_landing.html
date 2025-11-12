@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salabook - Book Temple Halls for Your Sacred Events</title>
+    <meta name="description" content="Discover and book beautiful temple halls for your special occasions. Find the perfect venue for weddings, ceremonies, and spiritual gatherings." />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Salabook</a>
+            <nav>
+                <a href="#features">Features</a>
+                <a href="halls.html">Halls</a>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+             <div class="auth-buttons" id="authButtons">
+                    <button class="btn-login" id="loginBtn">Login</button>
+                    <button class="btn-signup" id="signupBtn">Sign Up</button>
+                </div>
+                <div class="user-menu" id="userMenu">
+                    <img src="image/profile icon.jpg" class="user-pic" id="userAvatar" alt="User Picture">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" id="viewProfile">My Account</a>
+                        <a href="#" id="settings">Settings</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--login model-->
+ <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeLogin">&times;</button>
+            <div class="modal-header">
+                <h2>Welcome Back</h2>
+                <p>Login to your Salabook account</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="form-submit">Login</button>
+            </form>
+            <div class="form-footer">
+                Don't have an account? <a href="#" id="switchToSignup">Sign up</a>
+            </div>
+        </div>
+    </div>
+<!--signup model-->
+<div class="modal" id="signupModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeSignup">&times;</button>
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <p>Join Salabook today</p>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="signupRole">Role</label>
+                    <select id="signupRole" required>
+                        <option value="user" selected>User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="form-group" id="adminCodeGroup" style="display:none;">
+                    <label for="adminCode">Admin Access Code</label>
+                    <input type="password" id="adminCode" placeholder="Enter admin code">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" required placeholder="+1 234 567 8900">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required placeholder="Create a password">
+                </div>
+                <button type="submit" class="form-submit">Create Account</button>
+            </form>
+            <div class="form-footer">
+                Already have an account? <a href="#" id="switchToLogin">Login</a>
+            </div>
+        </div>
+    </div>
+    <!--account section-->
+      <section class="account-section" id="accountSection">
+        <div class="account-header">
+            <h1>My Account</h1>
+        </div>
+        <div class="account-grid">
+            <div class="account-sidebar">
+                <a href="#" class="active" data-section="profile">Profile</a>
+                <a href="#" data-section="bookings" id="myBookingsLink">My Bookings</a>
+                <a href="#" data-section="settings">Settings</a>
+            </div>
+            <div class="account-content" id="accountContent">
+                <h2>Profile Information</h2>
+                <div class="info-row">
+                    <span class="info-label">Name:</span>
+                    <span class="info-value" id="profileName">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value" id="profileEmail">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Phone:</span>
+                    <span class="info-value" id="profilePhone">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Member Since:</span>
+                    <span class="info-value" id="profileDate">-</span>
+                </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Book Temple Halls for Your Events</h1>
+            <p class="subtitle">Discover and book temple halls. Find the perfect venue where tradition meets convenience.</p>
+            <div class="cta-buttons">
+                <a href="halls.html" class="btn btn-primary">Start Booking</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Why Choose Salabook?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Sacred Spaces</h3>
+                    <p>Browse a curated selection of beautiful temple halls, each with its own unique character and spiritual ambiance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Easy Booking</h3>
+                    <p>Check availability, view pricing, and book your perfect venue in just a few clicks. Simple, transparent, and hassle-free.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Efficient Hall Management</h3>
+                    <p> lets users search, compare, and book temple halls online in minutes — no more phone calls or paperwork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Begin Your Journey?</h2>
+            <p>Join thousands of families who have celebrated their most precious moments in our sacred spaces.</p>
+            <a href="#" class="btn btn-primary">Book Your Hall Today</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+    <script src="script/api.js"></script>
+    <script src="script/auth_api.js"></script>
+</body>
+</html>
+<img src="image/profile icon.jpg" class="user-pic">

@@ -1,0 +1,66 @@
+/* General Body Styling */
+body {
+  font-family: "Noto Sans Thai", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #b48a3b;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Main container */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: #000000;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Sections */
+section {
+  padding: 20px;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 10px 0 15px 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}

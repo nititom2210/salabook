@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalaBook | Payment</title>
+  <link rel="stylesheet" href="css/booking.css">
+  <style>
+    .payment-box { max-width: 700px; margin: 40px auto; background:#fff; padding:24px; border-radius:12px; border:1px solid #eee; }
+    .status { font-weight:600; margin-bottom: 10px; }
+    .success { color:#2f8f46; }
+    .pending { color:#a56b00; }
+  </style>
+  </head>
+<body>
+  <nav class="navbar">
+    <a href="halls.html" class="bact-btn">&lt;</a>
+    <div class="logo">SalaBook</div>
+    <ul class="nav-links">
+      <li><a href="salabook_landing.html">Home</a></li>
+      <li><a href="halls.html">Halls</a></li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <div class="payment-box">
+      <h2>Payment</h2>
+      <p id="bookingInfo"></p>
+      <p id="bookingStatus" class="status pending"></p>
+      <div id="payForm">
+        <label>Upload Payment Slip (image/pdf)</label>
+        <input type="file" id="slip" accept="image/*,application/pdf">
+        <br><br>
+        <button id="markPaidBtn">Submit Payment for Review</button>
+      </div>
+      <div id="doneBox" style="display:none;">
+        <p class="success">Payment submitted. Awaiting admin confirmation.</p>
+        <a href="salabook_landing.html" class="btn-link">Go to My Bookings</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="script/api.js"></script>
+  <script src="script/payment_api.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalaBook | Admin Rules</title>
+  <link rel="stylesheet" href="css/admin_rules.css">
+</head>
+<body>
+
+  <nav class="adminbar">
+    <a href="halls.html" class="back-btn">&lt;</a>
+    <div class="logo">SalaBook — Admin</div>
+    <ul class="links">
+      <li><a href="halls.html">Halls</a></li>
+      <li><a href="salabook_landing.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="overview">
+      <div class="card-grid" id="overview-cards">
+        <!-- Filled by admin_rules.js -->
+      </div>
+    </section>
+
+    <!-- Quick action queues first -->
+    <section>
+      <h2>Payments Awaiting Confirmation</h2>
+      <table id="payments-table" class="table"></table>
+    </section>
+
+    <section>
+      <h2>Cancellation Requests</h2>
+      <table id="cancellations-table" class="table"></table>
+    </section>
+
+    <!-- Then configuration tools -->
+    <h1>Manage Availability & Pricing (Demo)</h1>
+
+    <section class="controls">
+      <label for="hall-select">Hall</label>
+      <select id="hall-select">
+        <option value="A">Sala A</option>
+        <option value="B">Sala B</option>
+        <option value="C">Sala C</option>
+      </select>
+      <button id="reload-btn" class="btn">Load</button>
+    </section>
+
+    <section class="grid two-col">
+      <div>
+        <h2>Availability (next 60 days)</h2>
+        <div class="legend">
+          <span class="dot available"></span> Available
+          <span class="dot unavailable"></span> Unavailable
+        </div>
+        <table id="admin-availability" class="table"></table>
+        <div class="row">
+          <label for="toggle-date">Toggle date</label>
+          <input type="date" id="toggle-date">
+          <button id="toggle-date-btn" class="btn">Toggle</button>
+        </div>
+        <div class="row">
+          <button id="reset-availability-btn" class="btn danger">Reset availability (regen)</button>
+        </div>
+      </div>
+
+      <div>
+        <h2>Pricing Rules</h2>
+        <table id="rules-table" class="table"></table>
+        <div class="grid three-col form">
+          <div>
+            <label for="price-start">Start</label>
+            <input type="date" id="price-start">
+          </div>
+          <div>
+            <label for="price-end">End</label>
+            <input type="date" id="price-end">
+          </div>
+          <div>
+            <label for="price-per-day">Price / day (THB)</label>
+            <input type="number" id="price-per-day" min="1" step="1">
+          </div>
+        </div>
+        <div class="row">
+          <button id="add-rule-btn" class="btn">Add/Update Rule</button>
+          <button id="clear-rules-btn" class="btn danger">Clear All Rules</button>
+        </div>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <script src="script/api.js"></script>
+  <script src="script/admin_rules_api.js"></script>
+</body>
+<!-- For demo only: no auth gates. In production, protect this page. -->
+</html>
+
+

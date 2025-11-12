@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalaBook | Hall Details</title>
+    <link rel="stylesheet" href="css/view_detail.css">
+</head>
+<body>
+
+<!-- view_detail.html - CORRECT VERSION -->
+<nav class="viewbar">
+  <a href="halls.html" class="back-btn">&lt;</a>
+  <div class="logo">SalaBook</div>
+  <ul class="view-links">
+    <li><a href="salabook_landing.html">Home</a></li>
+    <li><a href="halls.html">Halls</a></li>
+  </ul>
+</nav>
+
+  <div class="detail-container">
+
+      <!-- ✅ รูป Hall -->
+      <img id="hall-image" class="detail-img" src="" alt="Hall Image">
+
+      <!-- ✅ ชื่อ + รายละเอียด -->
+      <h2 id="hall-name" class="detail-title">Loading...</h2>
+      <p id="hall-location" class="detail-info"></p>
+      <p id="hall-description" class="detail-info"></p>
+
+      <!-- ✅ Quick Facts -->
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-label">Capacity</div>
+          <div id="hall-capacity" class="info-value">-</div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">Cost per day</div>
+          <div id="hall-cost" class="info-value">-</div>
+        </div>
+        <div class="info-card">
+          <div class="info-label">Location</div>
+          <div id="hall-address" class="info-value">-</div>
+        </div>
+      </div>
+
+      <!-- ✅ Embedded Map -->
+      <div class="map-embed">
+        <iframe id="map-frame" width="100%" height="250" style="border:0;" loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- ✅ Amenities -->
+      <div class="section">
+        <h3 class="section-title">Amenities</h3>
+        <ul id="amenities-list" class="amenities-list"></ul>
+      </div>
+
+      <!-- ✅ Descriptions Sections -->
+      <div class="section">
+        <h3 class="section-title">Overview</h3>
+        <p id="section-overview" class="section-text"></p>
+      </div>
+      <div class="section">
+        <h3 class="section-title">Suitable for</h3>
+        <p id="section-suitable" class="section-text"></p>
+      </div>
+      <div class="section">
+        <h3 class="section-title">Facilities & Equipment</h3>
+        <p id="section-facilities" class="section-text"></p>
+      </div>
+      <div class="section">
+        <h3 class="section-title">Terms & Conditions</h3>
+        <p id="section-terms" class="section-text"></p>
+      </div>
+
+      <!-- ✅ Booking Box (dates + CTA) -->
+      <div class="booking-box">
+        <label for="start-date">Start date</label>
+        <input type="date" id="start-date" name="start-date">
+
+        <label for="end-date">End date</label>
+        <input type="date" id="end-date" name="end-date">
+
+        <br><br>
+        <div id="pricing-summary" class="pricing-summary"></div>
+        <div id="date-hint" class="date-hint" style="display:none;"></div>
+        <button id="book-now-btn" class="btn-book">Book Now</button>
+      </div>
+
+      <!-- ✅ Availability Section -->
+      <div class="section">
+        <h3 class="section-title">Availability</h3>
+        <div class="availability-legend">
+          <span class="legend available">Available</span>
+          <span class="legend unavailable">Unavailable</span>
+        </div>
+        <div id="availability-container">
+          <table id="availability-table" class="availability-table"></table>
+        </div>
+      </div>
+
+      <!-- ✅ Pricing Rules -->
+      <div class="section">
+        <h3 class="section-title">Pricing by Date</h3>
+        <table id="pricing-table" class="pricing-table"></table>
+      </div>
+    </div>
+
+  <script src="script/api.js"></script>
+  <script src="script/view_detail_api.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salabook | Halls</title>
+  <link rel="stylesheet" href="css/hall.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="salabook_landing.html" class="bact-btn">&lt;</a>
+      <a href="salabook_landing.html" class="logo">Salabook</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="halls.html" class="active">Halls</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Our Available Halls</h1>
+        
+      </div>
+    </section>
+
+   <section class="hall-section">
+  <div class="container hall-grid">
+    <!-- Hall A -->
+    <div class="hall-card" data-hall="A">
+      <img src="hall-1.jpg" alt="Sala A Hall">
+      <div class="card-content">
+        <h3>Sala A</h3>
+        <p class="location">📍 Near main gate</p>
+        <p class="desc">Spacious hall suitable for 100 guests.</p>
+        <a href="view_detail.html?hall=A" class="btn btn-view">View Details</a>
+      </div>
+    </div>
+
+    <!-- Hall B -->
+    <div class="hall-card" data-hall="B">
+      <img src="hall-2.jpg" alt="Sala B Hall">
+      <div class="card-content">
+        <h3>Sala B</h3>
+        <p class="location">📍 Behind the temple garden</p>
+        <p class="desc">Quiet environment, perfect for small ceremonies.</p>
+        <a href="view_detail.html?hall=B" class="btn btn-view">View Details</a>
+      </div>
+    </div>
+
+    <!-- Hall C -->
+    <div class="hall-card" data-hall="C">
+      <img src="hall-3.jpg" alt="Sala C Hall">
+      <div class="card-content">
+        <h3>Sala C</h3>
+        <p class="location">📍 Next to parking area</p>
+        <p class="desc">Air-conditioned hall with modern facilities.</p>
+        <a href="view_detail.html?hall=C" class="btn btn-view">View Details</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="hallModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <div class="modal-body">
+      <h2 id="hallName"></h2>
+      <p id="hallLocation"></p>
+      <p id="hallDescription"></p>
+      <button class="btn btn-book">Book Now</button>
+    </div>
+  </div>
+</div>
+
+  </main>
+  </body>
+  </html>

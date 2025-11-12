@@ -1,0 +1,355 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f7f7;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* Navbar */
+.viewbar {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #b48a3b;
+}
+
+.view-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.view-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.view-links a:hover {
+    color: #b48a3b;
+}
+
+/* Detail Container */
+.detail-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Hall Image */
+.detail-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+/* Hall Information Card */
+.detail-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.detail-info {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    backdrop-filter: none;
+}
+
+/* Info grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+}
+.info-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #eee;
+}
+.info-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+.info-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Map placeholder */
+.map-embed iframe {
+    border-radius: 12px;
+    background: #e9eef5;
+}
+
+/* Sections */
+.section {
+    margin-top: 22px;
+}
+.section-title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.section-text {
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 16px;
+    border: 1px solid #eee;
+    color: #333;
+}
+
+/* Amenities */
+.amenities-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.amenities-list li {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Availability */
+.availability-legend {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.legend {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid #eee;
+}
+.legend.available {
+    background: #e7f7ec;
+    color: #247a39;
+    border-color: #bde5c6;
+}
+.legend.unavailable {
+    background: #fde8e7;
+    color: #a22e2a;
+    border-color: #f5b5b2;
+}
+.availability-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.availability-table th,
+.availability-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    font-size: 14px;
+}
+.availability-table tr:last-child td {
+    border-bottom: none;
+}
+.availability-table td.available {
+    color: #247a39;
+    font-weight: 600;
+}
+.availability-table td.unavailable {
+    color: #a22e2a;
+    font-weight: 600;
+}
+
+/* Pricing */
+.pricing-summary {
+    margin: 8px 0 12px;
+    font-weight: 600;
+    color: #333;
+}
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.pricing-table th,
+.pricing-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    font-size: 14px;
+}
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+/* Booking Box */
+.booking-box {
+    margin-top: 35px;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.booking-box label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.booking-box label:first-of-type {
+    margin-top: 0;
+}
+
+.booking-box input[type="date"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.booking-box input[type="date"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Unavailable selection indicator in booking-box */
+.booking-box input[type="date"].date-unavailable {
+    border-color: #c53a36;
+    color: #a22e2a;
+    background: #fde8e7;
+}
+.booking-box .date-hint {
+    margin-top: 8px;
+    color: #a22e2a;
+    font-size: 14px;
+}
+
+/* Book Now Button */
+.btn-book {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #b48a3b;
+  color: #fff;
+}
+
+.btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
+}
+
+.btn-book:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .viewbar {
+        padding: 15px 20px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+    
+    .view-links {
+        gap: 20px;
+    }
+    
+    .detail-container {
+        margin: 30px auto;
+    }
+    
+    .detail-img {
+        height: 300px;
+        border-radius: 15px;
+    }
+    
+    .detail-title {
+        font-size: 28px;
+    }
+    
+    .detail-info {
+        font-size: 15px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-box {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-img {
+        height: 250px;
+    }
+    
+    .detail-title {
+        font-size: 24px;
+    }
+    
+    .booking-box {
+        padding: 20px 15px;
+    }
+    
+    .btn-book {
+        font-size: 16px;
+    }
+}

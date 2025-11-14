@@ -24,11 +24,11 @@ class User {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert user
-       $stmt = $this->db->prepare("
-            INSERT INTO users (name, email, phone, password_hash, role, created_at)
+        $stmt = $this->db->prepare("
+            INSERT INTO users (name, email, phone, password, role, created_at)
             VALUES (?, ?, ?, ?, ?, NOW())
         ");
-$stmt->execute([$name, $email, $phone, $hashedPassword, $role]);
+        $stmt->execute([$name, $email, $phone, $hashedPassword, $role]);
 
 
         return $this->db->lastInsertId();
@@ -42,12 +42,12 @@ $stmt->execute([$name, $email, $phone, $hashedPassword, $role]);
         $stmt->execute([$email]);
         $user = $stmt->fetch();
 
-        if (!$user || !password_verify($password, $user['password_hash'])) {
+        if (!$user || !password_verify($password, $user['password'])) {
             return false;
         }
 
         // Remove password from response
-        unset($user['password_hash']);
+        unset($user['password']);
         return $user;
     }
 
